@@ -11,7 +11,7 @@
   gcloud app browse
 ```
 ____
-#REGIONS
+# REGIONS
 `1` *=>* `asia-east1`<br>
 `2` *=>* `asia-northeast1`<br>
 `3` *=>* `asia-south1`<br>
