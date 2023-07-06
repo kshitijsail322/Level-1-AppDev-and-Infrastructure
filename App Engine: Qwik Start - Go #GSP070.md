@@ -8,7 +8,6 @@
 ```
 
 `1` *=>* `asia-east1`
-
 `2` *=>* `asia-northeast1`
 
 `3` *=>* `asia-south1`
