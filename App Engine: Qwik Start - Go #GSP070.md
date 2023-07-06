@@ -7,7 +7,7 @@
   gcloud app browse
 ```
 
-`1` *=>* `asia-east1`
+`1` *=>* `asia-east1`<br>
 `2` *=>* `asia-northeast1`
 
 `3` *=>* `asia-south1`
