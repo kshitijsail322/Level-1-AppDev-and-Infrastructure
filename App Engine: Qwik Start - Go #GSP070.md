@@ -1,4 +1,7 @@
 ```cmd
+  export REGION=
+```
+```cmd
   gcloud config set compute/region $REGION
   gcloud services enable appengine.googleapis.com
   git clone https://github.com/GoogleCloudPlatform/golang-samples.git
@@ -7,7 +10,8 @@
   gcloud app deploy
   gcloud app browse
 ```
-
+____
+#REGIONS
 `1` *=>* `asia-east1`<br>
 `2` *=>* `asia-northeast1`<br>
 `3` *=>* `asia-south1`<br>
