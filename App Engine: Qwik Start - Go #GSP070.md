@@ -1,14 +1,14 @@
 ```cmd
-  export REGION=
+export REGION=
 ```
 ```cmd
-  gcloud config set compute/region $REGION
-  gcloud services enable appengine.googleapis.com
-  git clone https://github.com/GoogleCloudPlatform/golang-samples.git
-  cd golang-samples/appengine/go11x/helloworld
-  sudo apt-get install google-cloud-sdk-app-engine-go
-  gcloud app deploy
-  gcloud app browse
+gcloud config set compute/region $REGION
+gcloud services enable appengine.googleapis.com
+git clone https://github.com/GoogleCloudPlatform/golang-samples.git
+cd golang-samples/appengine/go11x/helloworld
+sudo apt-get install google-cloud-sdk-app-engine-go
+gcloud app deploy
+gcloud app browse
 ```
 ____
 # REGIONS
