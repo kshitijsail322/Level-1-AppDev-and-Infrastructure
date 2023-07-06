@@ -1,4 +1,5 @@
 ```cmd
+  gcloud config set compute/region $REGION
   gcloud services enable appengine.googleapis.com
   git clone https://github.com/GoogleCloudPlatform/golang-samples.git
   cd golang-samples/appengine/go11x/helloworld
