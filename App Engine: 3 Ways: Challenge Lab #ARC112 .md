@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
 EOF
 gcloud app deploy
-echo -e "\033[32mNow type N or No when asked\033[0m"
+echo -e "\033[32mNow typeY then N or No when asked\033[0m"
 gcloud compute ssh "lab-setup"
 ```
 ```cmd
