@@ -1,5 +1,5 @@
 # ARC112
-### Run in cloudshell
+### Run in cloudshell [add your message inside "" eg: "Hello World!" ]
 ```cmd
 export MESSAGE=""
 ```
@@ -24,12 +24,13 @@ if __name__ == "__main__":
 
 EOF
 gcloud app deploy
+echo -e "\033[32mNow type N or No when asked\033[0m"
+gcloud compute ssh "lab-setup"
 ```
-____
-### Run in lab-setup vm
 ```cmd
 git clone https://github.com/GoogleCloudPlatform/python-docs-samples.git
 cd python-docs-samples/appengine/standard_python3/hello_world
+exit
 ```
 ____
 # REGIONS
