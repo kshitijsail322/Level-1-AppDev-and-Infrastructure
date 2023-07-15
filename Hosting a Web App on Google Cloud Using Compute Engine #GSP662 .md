@@ -1,4 +1,5 @@
 # GSP662
+# ⚠️ Dont do this lab it will get fixed on 17 July 6pm
 ## Run in cloudshell
 ```cmd
 gcloud config set compute/zone us-central1-f
