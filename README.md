@@ -4,8 +4,8 @@ Level 1: AppDev and Infrastructure Solutions <br>
 **[NOTE]** Give credit when you use my code in your videos or share this code to someone.<br>
 If lab not working contact me on [Instagram @hardikgupta.social](https://www.instagram.com/hardikgupta.social/)
 **Labs :**           
-| S.NO | LAB NUMBER | LAB NAME | STATUS | LAST CHECKED | SOLUTION STATUS |
-|------|------------|----------|--------|--------------|-----------------|
+| S.NO | LAB NUMBER | LAB NAME | LAB STATUS | LAST CHECKED | SOLUTION STATUS |
+|------|------------|----------|------------|--------------|-----------------|
 |  01  | GSP070     | App Engine: Qwik Start - Go | WORKING FINE ✅ | 16-07-2023 1:25 AM | UPLOADED |
 |  02  | GSP069     | App Engine: Qwik Start - PHP | WORKING FINE ✅ | 15-07-2023 9:23 PM | UPLOADED |
 |  03  | ARC112     | App Engine: 3 Ways: Challenge Lab | WORKING FINE ✅ | 16-07-2023 11:20 AM | UPLOADED |
