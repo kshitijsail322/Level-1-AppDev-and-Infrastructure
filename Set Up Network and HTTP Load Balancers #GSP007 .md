@@ -48,6 +48,7 @@ gcloud compute firewall-rules create www-firewall-network-lb \
 gcloud compute instances list
 gcloud compute addresses create network-lb-ip-1 \
 --region $REGION
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute http-health-checks create basic-check
   gcloud compute target-pools create www-pool \
     --region $REGION --http-health-check basic-check
@@ -79,6 +80,7 @@ gcloud compute instance-templates create lb-backend-template \
      echo "Page served from: $vm_hostname" | \
      tee /var/www/html/index.html
      systemctl restart apache2'
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute instance-groups managed create lb-backend-group \
    --template=lb-backend-template --size=2 --zone=$ZONE
 gcloud compute firewall-rules create fw-allow-health-check \
@@ -101,6 +103,7 @@ gcloud compute backend-services create web-backend-service \
   --port-name=http \
   --health-checks=http-basic-check \
   --global
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute backend-services add-backend web-backend-service \
   --instance-group=lb-backend-group \
   --instance-group-zone=$ZONE \
