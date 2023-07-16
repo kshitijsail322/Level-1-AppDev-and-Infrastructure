@@ -1,5 +1,6 @@
 # ARC124
 ## Run in cloudshsell
+### ⚠️ Dont do this lab it will be fixed in few hours
 ```cmd
 export ZONE=
 ```
