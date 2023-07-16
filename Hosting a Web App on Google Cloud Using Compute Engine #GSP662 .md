@@ -15,6 +15,7 @@ nvm install --lts
 curl -O -L https://github.com/CodingWithHardik/Level-1-AppDev-and-Infrastructure/blob/master/sh%20files/startup-script.sh
 gsutil cp ~/monolith-to-microservices/startup-script.sh gs://fancy-store-$DEVSHELL_PROJECT_ID
 cd ~
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 rm -rf monolith-to-microservices/*/node_modules
 gsutil -m cp -r monolith-to-microservices gs://fancy-store-$DEVSHELL_PROJECT_ID/
 gcloud compute instances create backend \
@@ -41,6 +42,7 @@ gcloud compute instances create frontend \
 gcloud compute firewall-rules create fw-fe \
     --allow tcp:8080 \
     --target-tags=frontend
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute firewall-rules create fw-be \
     --allow tcp:8081-8082 \
     --target-tags=backend
@@ -76,6 +78,7 @@ gcloud compute health-checks create http fancy-fe-hc \
     --healthy-threshold 1 \
     --timeout 10s \
     --unhealthy-threshold 3
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute health-checks create http fancy-be-hc \
     --port 8081 \
     --request-path=/api/orders \
@@ -119,6 +122,7 @@ gcloud compute backend-services create fancy-be-products \
   --http-health-checks fancy-be-products-hc \
   --port-name products \
   --global
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute backend-services add-backend fancy-fe-frontend \
   --instance-group fancy-fe-mig \
   --instance-group-zone $ZONE \
@@ -144,6 +148,7 @@ gcloud compute forwarding-rules create fancy-http-rule \
   --target-http-proxy fancy-proxy \
   --ports 80
 cd ~/monolith-to-microservices/react-app/
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute forwarding-rules list --global
 export IP1=$(gcloud compute forwarding-rules describe fancy-http-rule --global --format='get(IPAddress)')
 cd ~/monolith-to-microservices/react-app
@@ -180,6 +185,7 @@ gcloud compute instance-groups managed rolling-action start-update fancy-fe-mig 
 cd ~/monolith-to-microservices/react-app/src/pages/Home
 mv index.js.new index.js
 cat ~/monolith-to-microservices/react-app/src/pages/Home/index.js
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 cd ~/monolith-to-microservices/react-app
 npm install && npm run-script build
 cd ~
