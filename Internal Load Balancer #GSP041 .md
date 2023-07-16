@@ -3,6 +3,10 @@
 ```cmd
 export ZONE=
 ```
+### Get the ip address from Task 3 Step 4
+```cmd
+export IP_ADDRESS=
+```
 ```cmd
 export REGION=${ZONE::-2}
 gcloud config set compute/region $REGION
