@@ -5,6 +5,8 @@ export ZONE=
 ```
 ```cmd
 export REGION=${ZONE::-2}
+gcloud config set compute/region $REGION
+gcloud config set compute/zone $ZONE
 sudo apt-get install -y virtualenv
 python3 -m venv venv
 source venv/bin/activate
