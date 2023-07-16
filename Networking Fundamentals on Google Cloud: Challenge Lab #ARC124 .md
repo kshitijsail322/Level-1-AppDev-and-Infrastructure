@@ -1,13 +1,10 @@
 # ARC124
 ## Run in cloudshsell
-### ⚠️ Dont do this lab it will be fixed in few hours
 ```cmd
 export ZONE=
 ```
 ```cmd
 export REGION=${ZONE::-2}
-gcloud config set compute/region $REGION
-gcloud config set compute/zone $ZONE
 gcloud compute instances create web1 \
 --zone=$ZONE \
 --machine-type=e2-small \
