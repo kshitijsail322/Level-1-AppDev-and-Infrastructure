@@ -1,5 +1,4 @@
 # GSP662
-# ⚠️ Dont do this lab it will get fixed on 17 July 6pm
 ## Run in cloudshell
 ```cmd
 export ZONE=
