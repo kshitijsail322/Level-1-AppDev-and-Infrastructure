@@ -37,7 +37,7 @@ gcloud compute backend-services add-backend prime-service \
 gcloud compute forwarding-rules create prime-lb \
 --load-balancing-scheme internal \
 --ports 80 --network default \
---region $REGION --address 10.128.10.10 \
+--region $REGION --address $IP_ADDRESS \
 --backend-service prime-service
 curl -O -L https://github.com/CodingWithHardik/Level-1-AppDev-and-Infrastructure/blob/master/sh%20files/frontend.sh
 gcloud compute instances create frontend --zone $ZONE \
