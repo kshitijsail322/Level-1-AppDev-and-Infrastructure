@@ -1,11 +1,14 @@
 # GSP004
 ## Run in cloudshell
 ```cmd
-gcloud compute instances create gcelab --zone us-central1-c
+export ZONE=
+```
+```cmd
+gcloud compute instances create gcelab --zone $ZONE
 gcloud compute disks create mydisk --size=200GB \
---zone us-central1-c
+--zone $ZONE
 gcloud compute instances attach-disk gcelab --disk mydisk --zone us-central1-c
-gcloud compute ssh gcelab --zone us-central1-c
+gcloud compute ssh gcelab --zone $ZONE
 ```
 ```cmd
 sudo mkdir /mnt/mydisk
