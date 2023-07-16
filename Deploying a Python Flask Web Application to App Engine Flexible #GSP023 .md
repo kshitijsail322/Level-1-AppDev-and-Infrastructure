@@ -6,11 +6,13 @@
 gcloud storage cp -r gs://spls/gsp023/flex_and_vision/ .
 cd flex_and_vision
 export PROJECT_ID=$(gcloud config get-value project)
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud iam service-accounts create qwiklab \
   --display-name "My Qwiklab Service Account"
 gcloud projects add-iam-policy-binding ${PROJECT_ID} \
 --member serviceAccount:qwiklab@${PROJECT_ID}.iam.gserviceaccount.com \
 --role roles/owner
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud iam service-accounts keys create ~/key.json \
 --iam-account qwiklab@${PROJECT_ID}.iam.gserviceaccount.com
 export GOOGLE_APPLICATION_CREDENTIALS="/home/${USER}/key.json"
@@ -20,6 +22,7 @@ pip install -r requirements.txt
 gcloud app create
 export CLOUD_STORAGE_BUCKET=${PROJECT_ID}
 gsutil mb gs://${PROJECT_ID}
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 python main.py
 ```
 ____
@@ -45,6 +48,7 @@ manual_scaling:
   instances: 1
 
 EOF
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud config set app/cloud_build_timeout 1000
 gcloud app deploy
 ```
