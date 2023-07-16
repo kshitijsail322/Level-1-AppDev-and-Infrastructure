@@ -5,6 +5,7 @@ export ZONE=
 ```
 ```cmd
 export REGION=${ZONE::-2}
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute instances create web1 \
 --zone=$ZONE \
 --machine-type=e2-small \
@@ -92,6 +93,7 @@ gcloud compute addresses describe lb-ipv4-1 \
 --global
 gcloud compute health-checks create http http-basic-check \
 --port 80
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute backend-services create web-backend-service \
 --protocol=HTTP \
 --port-name=http \
