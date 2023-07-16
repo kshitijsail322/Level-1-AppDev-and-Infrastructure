@@ -1,8 +1,10 @@
 # GSP069
 ```cmd
 gcloud services enable appengine.googleapis.com
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 git clone https://github.com/GoogleCloudPlatform/php-docs-samples.git
 cd php-docs-samples/appengine/standard/helloworld
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud app deploy
 gcloud app browse
 ```
