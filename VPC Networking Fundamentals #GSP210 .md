@@ -9,6 +9,7 @@ gcloud compute networks create mynetwork \
 --project=$DEVSHELL_PROJECT_ID \
 --subnet-mode=auto --mtu=1460 \
 --bgp-routing-mode=regional
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute instances create mynet-us-vm \
 --project=$DEVSHELL_PROJECT_ID \
 --zone=$ZONE --machine-type=e2-micro \
@@ -22,6 +23,7 @@ gcloud compute instances create mynet-us-vm \
 --shielded-integrity-monitoring \
 --labels=goog-ec-src=vm_add-gcloud \
 --reservation-affinity=any
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute instances create mynet-eu-vm \
 --project=$DEVSHELL_PROJECT_ID \
 --zone=europe-west1-b \
