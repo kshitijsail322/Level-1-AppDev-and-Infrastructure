@@ -24,6 +24,7 @@ gcloud compute instance-groups managed create backend \
 --size 3 \
 --template primecalc \
 --zone $ZONE
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute instance-groups managed set-autoscaling backend \
 --target-cpu-utilization 0.8 --min-num-replicas 3 \
 --max-num-replicas 10 --zone $ZONE
@@ -34,6 +35,7 @@ gcloud compute backend-services create prime-service \
 gcloud compute backend-services add-backend prime-service \
 --instance-group backend --instance-group-zone $ZONE \
 --region $REGION
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute forwarding-rules create prime-lb \
 --load-balancing-scheme internal \
 --ports 80 --network default \
