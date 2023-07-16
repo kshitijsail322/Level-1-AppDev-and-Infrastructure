@@ -9,6 +9,7 @@ git clone https://github.com/GoogleCloudPlatform/python-docs-samples.git
 cd python-docs-samples/appengine/standard_python3/hello_world
 gcloud app deploy
 rm -f main.py
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 cat > main.py << EOF
 
 from flask import Flask
@@ -29,6 +30,7 @@ gcloud compute ssh "lab-setup"
 ```
 ```cmd
 git clone https://github.com/GoogleCloudPlatform/python-docs-samples.git
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 cd python-docs-samples/appengine/standard_python3/hello_world
 exit
 ```
