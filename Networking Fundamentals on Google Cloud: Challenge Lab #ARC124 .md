@@ -109,7 +109,7 @@ gcloud compute url-maps create web-map-http \
 gcloud compute target-http-proxies create http-lb-proxy \
 --url-map web-map-http
 gcloud compute forwarding-rules create http-content-rule \
---address=lb-ipv4-1\
+--address=lb-ipv4-1 \
 --global \
 --target-http-proxy=http-lb-proxy \
 --ports=80
