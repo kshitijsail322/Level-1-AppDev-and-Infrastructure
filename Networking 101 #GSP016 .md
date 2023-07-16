@@ -19,6 +19,7 @@ gcloud compute networks subnets list \
 gcloud compute firewall-rules create nw101-allow-http \
 --allow tcp:80 --network taw-custom-network --source-ranges 0.0.0.0/0 \
 --target-tags http
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute firewall-rules create "nw101-allow-icmp" --allow icmp --network "taw-custom-network" --target-tags rules
 gcloud compute firewall-rules create "nw101-allow-internal" --allow tcp:0-65535,udp:0-65535,icmp --network "taw-custom-network" --source-ranges "10.0.0.0/16","10.2.0.0/16","10.1.0.0/16"
 gcloud compute firewall-rules create "nw101-allow-ssh" --allow tcp:22 --network "taw-custom-network" --target-tags "ssh"
