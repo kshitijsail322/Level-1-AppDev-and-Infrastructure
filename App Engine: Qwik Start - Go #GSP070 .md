@@ -5,8 +5,10 @@ export REGION=
 ```cmd
 gcloud config set compute/region $REGION
 gcloud services enable appengine.googleapis.com
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 git clone https://github.com/GoogleCloudPlatform/golang-samples.git
 cd golang-samples/appengine/go11x/helloworld
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 sudo apt-get install google-cloud-sdk-app-engine-go
 gcloud app deploy
 gcloud app browse
