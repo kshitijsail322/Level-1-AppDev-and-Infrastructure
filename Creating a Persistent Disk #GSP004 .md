@@ -7,7 +7,7 @@ export ZONE=
 gcloud compute instances create gcelab --zone $ZONE
 gcloud compute disks create mydisk --size=200GB \
 --zone $ZONE
-gcloud compute instances attach-disk gcelab --disk mydisk --zone us-central1-c
+gcloud compute instances attach-disk gcelab --disk mydisk --zone $ZONE
 gcloud compute ssh gcelab --zone $ZONE
 ```
 ```cmd
