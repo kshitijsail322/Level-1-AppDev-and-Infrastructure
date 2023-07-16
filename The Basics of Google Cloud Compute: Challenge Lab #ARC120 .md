@@ -28,6 +28,7 @@ gcloud compute instances create my-instance \
 --reservation-affinity=any
 gcloud compute disks create mydisk --size=200GB \
 --zone=$ZONE
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 gcloud compute instances attach-disk my-instance \
 --disk mydisk \
 --zone=$ZONE
@@ -36,6 +37,7 @@ gcloud compute ssh my-instance \
 ```
 ```cmd
 sudo apt-get update
+echo -e "\033[31mhttps://www.youtube.com/@CodingWithHardik\033[0m"
 sudo apt-get install -y nginx
 ps auwx | grep nginx
 ```
