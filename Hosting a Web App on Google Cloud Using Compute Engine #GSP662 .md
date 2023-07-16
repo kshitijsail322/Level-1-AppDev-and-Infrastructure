@@ -2,7 +2,10 @@
 # ⚠️ Dont do this lab it will get fixed on 17 July 6pm
 ## Run in cloudshell
 ```cmd
-gcloud config set compute/zone us-central1-f
+export ZONE=
+```
+```cmd
+gcloud config set compute/zone $ZONE
 gcloud services enable compute.googleapis.com
 gsutil mb gs://fancy-store-$DEVSHELL_PROJECT_ID
 git clone https://github.com/googlecodelabs/monolith-to-microservices.git
@@ -20,7 +23,7 @@ gcloud compute instances create backend \
     --tags=backend \
    --metadata=startup-script-url=https://storage.googleapis.com/fancy-store-$DEVSHELL_PROJECT_ID/startup-script.sh
 gcloud compute instances list
-export EXTERNAL_IP=$(gcloud compute instances describe backend --zone=us-central1-f --format='get(networkInterfaces[0].accessConfigs[0].natIP)')
+export EXTERNAL_IP=$(gcloud compute instances describe backend --zone=$ZONE --format='get(networkInterfaces[0].accessConfigs[0].natIP)')
 cd ~/monolith-to-microservices/react-app
 rm -f .env
 cat > .env << EOF
@@ -119,15 +122,15 @@ gcloud compute backend-services create fancy-be-products \
   --global
 gcloud compute backend-services add-backend fancy-fe-frontend \
   --instance-group fancy-fe-mig \
-  --instance-group-zone us-central1-f \
+  --instance-group-zone $ZONE \
   --global
 gcloud compute backend-services add-backend fancy-be-orders \
   --instance-group fancy-be-mig \
-  --instance-group-zone us-central1-f \
+  --instance-group-zone $ZONE \
   --global
 gcloud compute backend-services add-backend fancy-be-products \
   --instance-group fancy-be-mig \
-  --instance-group-zone us-central1-f \
+  --instance-group-zone $ZONE \
   --global
 gcloud compute url-maps create fancy-map \
   --default-service fancy-fe-frontend
@@ -172,7 +175,7 @@ gcloud compute backend-services update fancy-fe-frontend \
 gcloud compute instances set-machine-type frontend --machine-type custom-4-3840
 gcloud compute instance-templates create fancy-fe-new \
     --source-instance=frontend \
-    --source-instance-zone=us-central1-f
+    --source-instance-zone=$ZONE
 gcloud compute instance-groups managed rolling-action start-update fancy-fe-mig \
     --version template=fancy-fe-new
 cd ~/monolith-to-microservices/react-app/src/pages/Home
